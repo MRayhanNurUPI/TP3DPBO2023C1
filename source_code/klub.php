@@ -74,7 +74,7 @@ while ($div = $klub->getResult()) {
     <th scope="row">' . $no . '</th>
     <td>' . $div['nama_klub'] . '</td>
     <td style="font-size: 22px;">
-        <a href="klub.php?id=' . $div['id_klub'] . '" title="Edit Data"><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a href="Klub.php?hapus=' . $div['id_klub'] . '" title="Delete Data"><i class="bi bi-trash-fill text-danger"></i></a>
+        <a href="klub.php?id=' . $div['id_klub'] . '" title="Edit Data"><i class="bi bi-pencil-square text-warning"></i></a>&nbsp;<a href="klub.php?hapus=' . $div['id_klub'] . '" title="Delete Data"><i class="bi bi-trash-fill text-danger"></i></a>
         </td>
     </tr>';
     $no++;

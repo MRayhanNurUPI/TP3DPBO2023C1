@@ -45,12 +45,12 @@ class Klub extends DB
     {
         $nama_klub = $data['nama'];
         $query = "UPDATE klub SET nama_klub = '$nama_klub' WHERE id_klub = $id";
-        return $this->execute($query);
+        return $this->executeAffected($query);
     }
 
     function deleteKlub($id)
     {
         $query = "DELETE FROM klub WHERE id_klub = $id";
-        return $this->execute($query);
+        return $this->executeAffected($query);
     }
 }

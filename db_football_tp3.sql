@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 08:36 PM
+-- Generation Time: May 24, 2023 at 09:16 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,7 +41,8 @@ INSERT INTO `klub` (`id_klub`, `nama_klub`) VALUES
 (2, 'Manchester City'),
 (11, 'Barcelona'),
 (13, 'Chelsea'),
-(15, 'Paris Saint Germain');
+(15, 'Paris Saint Germain'),
+(20, 'Madun FC');
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,8 @@ INSERT INTO `negara` (`id_negara`, `nama_negara`) VALUES
 (3, 'Polandia'),
 (4, 'Ukraina'),
 (5, 'Perancis'),
-(6, 'Argentina');
+(6, 'Argentina'),
+(10, 'Indonesia');
 
 -- --------------------------------------------------------
 
@@ -86,12 +88,12 @@ CREATE TABLE `pemain` (
 --
 
 INSERT INTO `pemain` (`id_pemain`, `nama_pemain`, `foto_pemain`, `id_posisi`, `id_klub`, `id_negara`) VALUES
-(1, 'Vinicius Jr.', 'vinicius-jr.jpg', 10, 1, 1),
-(2, 'Erling Haaland', 'erling-haaland.jpg', 12, 2, 2),
 (3, 'Robert Lewandowski', 'Robert Lewandowski.png', 12, 11, 3),
 (7, 'Mykhailo Mudryk', 'Mykhailo Mudryk.png', 10, 13, 4),
 (8, 'Karim Benzema', 'karim-benzema.png', 12, 1, 5),
-(10, 'Lionel Messi', 'messi.png', 9, 15, 6);
+(10, 'Lionel Messi', 'messi.png', 9, 15, 6),
+(11, 'Vini Jr.', 'vinicius-jr.jpg', 10, 1, 1),
+(14, 'Madun', 'madun.jpg', 9, 20, 10);
 
 -- --------------------------------------------------------
 
@@ -161,19 +163,19 @@ ALTER TABLE `posisi`
 -- AUTO_INCREMENT for table `klub`
 --
 ALTER TABLE `klub`
-  MODIFY `id_klub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_klub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `negara`
 --
 ALTER TABLE `negara`
-  MODIFY `id_negara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_negara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `pemain`
 --
 ALTER TABLE `pemain`
-  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pemain` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `posisi`

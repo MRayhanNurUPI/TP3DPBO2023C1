@@ -42,17 +42,16 @@ class Negara extends DB
 
     }
 
-    function updateNegara($data)
+    function updateNegara($id, $data)
     {
         $nama_negara = $data['nama'];
-        $id_negara = $data['id'];
-        $query = "UPDATE negara SET nama_negara = '$nama_negara' WHERE id_negara = $id_negara";
-        return $this->execute($query);
+        $query = "UPDATE negara SET nama_negara = '$nama_negara' WHERE id_negara = $id";
+        return $this->executeAffected($query);
     }
 
     function deleteNegara($id)
     {
         $query = "DELETE FROM negara WHERE id_negara = $id";
-        return $this->execute($query);
+        return $this->executeAffected($query);
     }
 }
